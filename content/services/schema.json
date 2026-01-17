@@ -1,0 +1,387 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Service Page Content Schema",
+  "description": "Unified content structure for all RejoiceHub service pages",
+  "type": "object",
+  "required": [
+    "serviceId",
+    "title", 
+    "subhead",
+    "problems",
+    "outcomes",
+    "capabilities",
+    "industries",
+    "processSteps",
+    "caseStudies",
+    "techStack",
+    "pricingNotes",
+    "faqs",
+    "primaryCTA",
+    "secondaryCTA",
+    "seoTitle",
+    "seoDescription"
+  ],
+  "properties": {
+    "serviceId": {
+      "type": "string",
+      "description": "Unique identifier matching the route slug",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Main service title for H1 hero heading",
+      "maxLength": 80
+    },
+    "subhead": {
+      "type": "string", 
+      "description": "Hero subheading that explains value proposition",
+      "maxLength": 200
+    },
+    "problems": {
+      "type": "array",
+      "description": "3-5 pain points this service addresses",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["title", "description"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "icon": {
+            "type": "string",
+            "description": "Lucide icon name or React component reference"
+          }
+        }
+      }
+    },
+    "outcomes": {
+      "type": "array",
+      "description": "3-5 measurable outcomes and benefits",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["title", "description"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "metric": {
+            "type": "string",
+            "description": "Performance metric like '40%' or '10x'",
+            "maxLength": 20
+          },
+          "icon": {
+            "type": "string",
+            "description": "Lucide icon name or React component reference"
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "description": "4-6 core capabilities or service features",
+      "minItems": 4,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["title", "description"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "icon": {
+            "type": "string",
+            "description": "Lucide icon name or React component reference"
+          },
+          "features": {
+            "type": "array",
+            "description": "Optional list of specific features",
+            "items": {
+              "type": "string",
+              "maxLength": 50
+            },
+            "maxItems": 4
+          }
+        }
+      }
+    },
+    "industries": {
+      "type": "array",
+      "description": "6-9 industries served with specific outcomes",
+      "minItems": 6,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": ["name", "outcome"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Industry name",
+            "maxLength": 40
+          },
+          "outcome": {
+            "type": "string",
+            "description": "One-line specific outcome for this industry",
+            "maxLength": 100
+          },
+          "icon": {
+            "type": "string",
+            "description": "Lucide icon name or React component reference"
+          }
+        }
+      }
+    },
+    "processSteps": {
+      "type": "array",
+      "description": "3-4 implementation process steps",
+      "minItems": 3,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["step", "title", "description"],
+        "properties": {
+          "step": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "duration": {
+            "type": "string",
+            "description": "Time estimate like '2-3 weeks'",
+            "maxLength": 30
+          },
+          "deliverables": {
+            "type": "array",
+            "description": "Key deliverables for this step",
+            "items": {
+              "type": "string",
+              "maxLength": 60
+            },
+            "maxItems": 4
+          }
+        }
+      }
+    },
+    "caseStudies": {
+      "type": "array",
+      "description": "2-3 mini case study cards",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["title", "industry", "metric", "result", "description"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "industry": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "metric": {
+            "type": "string",
+            "description": "Key number like '50%', '$2M'",
+            "maxLength": 15
+          },
+          "result": {
+            "type": "string",
+            "description": "Brief result description",
+            "maxLength": 60
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 300
+          }
+        }
+      }
+    },
+    "techStack": {
+      "type": "array",
+      "description": "Technologies and integrations used",
+      "minItems": 6,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["name", "category"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "logo": {
+            "type": "string",
+            "description": "URL to logo image or path",
+            "format": "uri"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["AI/ML", "Cloud", "Database", "Framework", "Integration", "Analytics", "Security", "DevOps"],
+            "description": "Technology category"
+          }
+        }
+      }
+    },
+    "pricingNotes": {
+      "type": "object",
+      "description": "Pricing model and engagement information",
+      "required": ["model", "description", "features"],
+      "properties": {
+        "model": {
+          "type": "string",
+          "description": "Pricing model name",
+          "maxLength": 60
+        },
+        "description": {
+          "type": "string",
+          "description": "Explanation of pricing approach",
+          "maxLength": 300
+        },
+        "startingPrice": {
+          "type": "string",
+          "description": "Starting price if applicable",
+          "maxLength": 30
+        },
+        "features": {
+          "type": "array",
+          "description": "What's included in the engagement",
+          "items": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "minItems": 4,
+          "maxItems": 8
+        }
+      }
+    },
+    "faqs": {
+      "type": "array",
+      "description": "5-7 frequently asked questions",
+      "minItems": 5,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "required": ["question", "answer"],
+        "properties": {
+          "question": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "answer": {
+            "type": "string",
+            "maxLength": 500
+          }
+        }
+      }
+    },
+    "primaryCTA": {
+      "type": "object",
+      "description": "Primary call-to-action button",
+      "required": ["text", "href", "type"],
+      "properties": {
+        "text": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "href": {
+          "type": "string",
+          "description": "URL or route path"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["link", "external", "calendar"],
+          "description": "Type of link for proper handling"
+        }
+      }
+    },
+    "secondaryCTA": {
+      "type": "object",
+      "description": "Secondary call-to-action button", 
+      "required": ["text", "href", "type"],
+      "properties": {
+        "text": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "href": {
+          "type": "string",
+          "description": "URL or route path"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["link", "external"],
+          "description": "Type of link for proper handling"
+        }
+      }
+    },
+    "seoTitle": {
+      "type": "string",
+      "description": "SEO optimized page title",
+      "maxLength": 60
+    },
+    "seoDescription": {
+      "type": "string",
+      "description": "SEO meta description",
+      "maxLength": 160
+    },
+    "ogImage": {
+      "type": "string",
+      "description": "Open Graph image URL",
+      "format": "uri"
+    },
+    "leadMagnetIds": {
+      "type": "array",
+      "description": "Lead magnets to display on this service page",
+      "items": {
+        "type": "string",
+        "description": "Lead magnet ID from registry"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "relatedServices": {
+      "type": "array", 
+      "description": "Related service IDs for cross-linking",
+      "items": {
+        "type": "string",
+        "description": "Service ID for related services"
+      },
+      "maxItems": 3
+    },
+    "testimonialIds": {
+      "type": "array",
+      "description": "Specific testimonials to show",
+      "items": {
+        "type": "string",
+        "description": "Testimonial ID"
+      },
+      "maxItems": 3
+    }
+  }
+}

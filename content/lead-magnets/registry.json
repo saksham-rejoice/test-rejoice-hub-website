@@ -1,0 +1,389 @@
+{
+  "registryVersion": "1.0.0",
+  "lastUpdated": "2024-01-15",
+  "description": "Central registry of all lead magnets with service-specific mappings",
+  "leadMagnets": {
+    "ai-agent-blueprint": {
+      "id": "ai-agent-blueprint",
+      "title": "Free AI Agent Blueprint Generator",
+      "description": "Get a personalized AI agent blueprint with technical specifications, implementation roadmap, and cost estimates tailored to your business needs.",
+      "value": "$2,500 Value",
+      "icon": "brain",
+      "type": "tool",
+      "category": "tools",
+      "features": [
+        "Personalized AI agent specifications",
+        "Technical implementation roadmap", 
+        "Cost estimation and ROI projection",
+        "Free 30-minute consultation call"
+      ],
+      "estimatedTime": "5 minutes",
+      "targetAudience": "Business leaders considering AI automation",
+      "downloadUrl": "/resources/ai-agent-blueprint",
+      "recommendedPlacement": ["hero", "inline", "exit-intent"],
+      "serviceMapping": ["ai-agents-services", "automation-services", "custom-ai-integrations"],
+      "analytics": {
+        "conversionGoal": "blueprint_generated",
+        "followUpAction": "schedule_consultation"
+      }
+    },
+    
+    "automation-roi-calculator": {
+      "id": "automation-roi-calculator",
+      "title": "Automation ROI Calculator",
+      "description": "Calculate your potential automation savings and ROI with our industry-specific tool. Get detailed projections and implementation timeline.",
+      "value": "$1,500 Value",
+      "icon": "calculator",
+      "type": "calculator",
+      "category": "tools",
+      "features": [
+        "Industry-specific calculations",
+        "ROI projections and timeline",
+        "Cost-benefit analysis",
+        "Implementation roadmap"
+      ],
+      "estimatedTime": "3 minutes",
+      "targetAudience": "Operations managers and decision makers",
+      "downloadUrl": "/tools/automation-roi-calculator",
+      "recommendedPlacement": ["inline", "sidebar"],
+      "serviceMapping": ["automation-services", "ai-agents-services"],
+      "analytics": {
+        "conversionGoal": "roi_calculated",
+        "followUpAction": "download_report"
+      }
+    },
+
+    "ai-readiness-assessment": {
+      "id": "ai-readiness-assessment",
+      "title": "AI Readiness Assessment",
+      "description": "Take our comprehensive 20-question assessment to get your AI readiness score and personalized implementation recommendations.",
+      "value": "$2,000 Value", 
+      "icon": "clipboard-check",
+      "type": "assessment",
+      "category": "tools",
+      "features": [
+        "20-question comprehensive evaluation",
+        "Personalized readiness scoring",
+        "Custom implementation roadmap",
+        "Industry benchmark comparisons"
+      ],
+      "estimatedTime": "8 minutes",
+      "targetAudience": "CTOs, IT directors, and business executives",
+      "downloadUrl": "/assessments/ai-readiness",
+      "recommendedPlacement": ["inline", "modal"],
+      "serviceMapping": ["ai-agents-services", "generative-ai-solutions", "custom-ai-integrations"],
+      "analytics": {
+        "conversionGoal": "assessment_completed",
+        "followUpAction": "schedule_strategy_call"
+      }
+    },
+
+    "ai-implementation-playbook": {
+      "id": "ai-implementation-playbook", 
+      "title": "AI Implementation Playbook",
+      "description": "Comprehensive 50+ page guide with step-by-step implementation strategies, best practices, case studies, and ROI templates.",
+      "value": "$1,200 Value",
+      "icon": "book",
+      "type": "ebook",
+      "category": "downloads",
+      "features": [
+        "50+ pages of actionable content",
+        "Step-by-step implementation guide",
+        "Real-world case studies",
+        "ROI calculation templates"
+      ],
+      "estimatedTime": "Instant download",
+      "targetAudience": "Business leaders planning AI initiatives",
+      "downloadUrl": "/downloads/ai-implementation-playbook.pdf",
+      "recommendedPlacement": ["inline", "exit-intent"],
+      "serviceMapping": ["ai-agents-services", "automation-services", "generative-ai-solutions"],
+      "analytics": {
+        "conversionGoal": "playbook_downloaded",
+        "followUpAction": "email_nurture_sequence"
+      }
+    },
+
+    "genai-use-case-playbook": {
+      "id": "genai-use-case-playbook",
+      "title": "Generative AI Use Case Playbook",
+      "description": "Discover 25+ proven generative AI use cases with implementation guides, ROI metrics, and real-world examples for your industry.",
+      "value": "$1,800 Value",
+      "icon": "brain",
+      "type": "ebook",
+      "category": "downloads", 
+      "features": [
+        "25+ proven use cases",
+        "Industry-specific examples",
+        "Implementation difficulty ratings",
+        "ROI and impact metrics"
+      ],
+      "estimatedTime": "Instant download",
+      "targetAudience": "Innovation leaders and AI strategists",
+      "downloadUrl": "/downloads/genai-use-case-playbook.pdf",
+      "recommendedPlacement": ["inline", "sidebar"],
+      "serviceMapping": ["generative-ai-solutions", "ai-agents-services"],
+      "analytics": {
+        "conversionGoal": "playbook_downloaded",
+        "followUpAction": "genai_consultation_offer"
+      }
+    },
+
+    "process-automation-checklist": {
+      "id": "process-automation-checklist",
+      "title": "Process Automation Readiness Checklist",
+      "description": "Essential checklist to identify automation opportunities in your organization with scoring framework and priority matrix.",
+      "value": "$800 Value",
+      "icon": "clipboard-check",
+      "type": "template",
+      "category": "templates",
+      "features": [
+        "Comprehensive evaluation framework",
+        "Priority scoring matrix",
+        "Process identification templates",
+        "ROI estimation worksheets"
+      ],
+      "estimatedTime": "Instant download",
+      "targetAudience": "Process improvement managers",
+      "downloadUrl": "/templates/automation-readiness-checklist.pdf",
+      "recommendedPlacement": ["inline"],
+      "serviceMapping": ["automation-services", "ai-agents-services"],
+      "analytics": {
+        "conversionGoal": "checklist_downloaded",
+        "followUpAction": "automation_assessment_offer"
+      }
+    },
+
+    "ai-project-planning-template": {
+      "id": "ai-project-planning-template",
+      "title": "AI Project Planning Template",
+      "description": "Complete Excel template for AI project planning with timelines, budgets, risk assessment, and stakeholder communication frameworks.",
+      "value": "$600 Value",
+      "icon": "file-text",
+      "type": "template",
+      "category": "templates",
+      "features": [
+        "Project timeline templates",
+        "Budget planning worksheets",
+        "Risk assessment framework",
+        "Stakeholder communication plans"
+      ],
+      "estimatedTime": "Instant download",
+      "targetAudience": "Project managers and team leads",
+      "downloadUrl": "/templates/ai-project-planning.xlsx",
+      "recommendedPlacement": ["inline"],
+      "serviceMapping": ["ai-agents-services", "generative-ai-solutions", "custom-ai-integrations"],
+      "analytics": {
+        "conversionGoal": "template_downloaded",
+        "followUpAction": "project_planning_consultation"
+      }
+    },
+
+    "ai-vendor-evaluation-guide": {
+      "id": "ai-vendor-evaluation-guide",
+      "title": "AI Vendor Evaluation Guide",
+      "description": "Complete guide for evaluating AI service providers with comparison frameworks, key questions, and selection criteria.",
+      "value": "$1,000 Value",
+      "icon": "clipboard-check",
+      "type": "ebook",
+      "category": "downloads",
+      "features": [
+        "Vendor evaluation criteria",
+        "Comparison framework templates",
+        "Key questions to ask vendors",
+        "Contract negotiation tips"
+      ],
+      "estimatedTime": "Instant download",
+      "targetAudience": "Procurement and IT decision makers",
+      "downloadUrl": "/downloads/ai-vendor-evaluation-guide.pdf",
+      "recommendedPlacement": ["sidebar", "exit-intent"],
+      "serviceMapping": ["ai-agents-services", "custom-ai-integrations", "generative-ai-solutions"],
+      "analytics": {
+        "conversionGoal": "guide_downloaded",
+        "followUpAction": "vendor_comparison_consultation"
+      }
+    },
+
+    "cloud-migration-checklist": {
+      "id": "cloud-migration-checklist",
+      "title": "Cloud Migration & DevOps Checklist",
+      "description": "Step-by-step checklist for successful cloud migration with security, compliance, and optimization best practices.",
+      "value": "$1,200 Value",
+      "icon": "file-text",
+      "type": "template",
+      "category": "templates",
+      "features": [
+        "Pre-migration assessment",
+        "Security and compliance checks",
+        "Performance optimization guide",
+        "Cost optimization strategies"
+      ],
+      "estimatedTime": "Instant download",
+      "targetAudience": "DevOps engineers and IT managers",
+      "downloadUrl": "/templates/cloud-migration-checklist.pdf",
+      "recommendedPlacement": ["inline"],
+      "serviceMapping": ["devops-cloud-services", "custom-ai-integrations"],
+      "analytics": {
+        "conversionGoal": "checklist_downloaded",
+        "followUpAction": "migration_consultation"
+      }
+    },
+
+    "ai-content-strategy-template": {
+      "id": "ai-content-strategy-template",
+      "title": "AI-Powered Content Strategy Template",
+      "description": "Complete framework for implementing AI in your content strategy with workflows, tools recommendations, and measurement metrics.",
+      "value": "$900 Value",
+      "icon": "brain",
+      "type": "template",
+      "category": "templates",
+      "features": [
+        "Content workflow templates",
+        "AI tools comparison matrix",
+        "Quality control frameworks",
+        "Performance measurement guides"
+      ],
+      "estimatedTime": "Instant download",
+      "targetAudience": "Content managers and marketing teams",
+      "downloadUrl": "/templates/ai-content-strategy.pdf",
+      "recommendedPlacement": ["inline"],
+      "serviceMapping": ["generative-ai-solutions", "ai-agents-services"],
+      "analytics": {
+        "conversionGoal": "template_downloaded",
+        "followUpAction": "content_ai_consultation"
+      }
+    },
+
+    "integration-architecture-guide": {
+      "id": "integration-architecture-guide", 
+      "title": "AI Integration Architecture Guide",
+      "description": "Technical guide for integrating AI solutions with existing systems, including API design patterns and security considerations.",
+      "value": "$1,500 Value",
+      "icon": "zap",
+      "type": "ebook",
+      "category": "downloads",
+      "features": [
+        "Integration design patterns",
+        "API architecture best practices",
+        "Security implementation guide",
+        "Scalability considerations"
+      ],
+      "estimatedTime": "Instant download",
+      "targetAudience": "Technical architects and developers",
+      "downloadUrl": "/downloads/ai-integration-architecture.pdf",
+      "recommendedPlacement": ["inline", "sidebar"],
+      "serviceMapping": ["custom-ai-integrations", "ai-agents-services"],
+      "analytics": {
+        "conversionGoal": "guide_downloaded",
+        "followUpAction": "technical_consultation"
+      }
+    }
+  },
+
+  "serviceMapping": {
+    "ai-agents-services": [
+      "ai-agent-blueprint",
+      "automation-roi-calculator", 
+      "ai-readiness-assessment",
+      "ai-implementation-playbook"
+    ],
+    "automation-services": [
+      "automation-roi-calculator",
+      "process-automation-checklist",
+      "ai-implementation-playbook",
+      "ai-project-planning-template"
+    ],
+    "generative-ai-solutions": [
+      "genai-use-case-playbook",
+      "ai-content-strategy-template", 
+      "ai-readiness-assessment",
+      "ai-vendor-evaluation-guide"
+    ],
+    "web-mobile-development": [
+      "ai-project-planning-template",
+      "integration-architecture-guide",
+      "ai-vendor-evaluation-guide"
+    ],
+    "devops-cloud-services": [
+      "cloud-migration-checklist",
+      "integration-architecture-guide",
+      "ai-project-planning-template"
+    ],
+    "custom-ai-integrations": [
+      "integration-architecture-guide",
+      "ai-agent-blueprint",
+      "ai-vendor-evaluation-guide",
+      "ai-project-planning-template"
+    ]
+  },
+
+  "placementRules": {
+    "hero": {
+      "maxMagnets": 1,
+      "preferredTypes": ["tool", "calculator"],
+      "displayStyle": "featured"
+    },
+    "inline": {
+      "maxMagnets": 3,
+      "preferredTypes": ["ebook", "template", "tool"],
+      "displayStyle": "grid"
+    },
+    "sidebar": {
+      "maxMagnets": 1,
+      "preferredTypes": ["ebook", "assessment"],
+      "displayStyle": "compact"
+    },
+    "exit-intent": {
+      "maxMagnets": 1,
+      "preferredTypes": ["ebook", "tool"],
+      "displayStyle": "modal",
+      "triggerConditions": {
+        "timeOnPage": 30,
+        "scrollPercentage": 70,
+        "exitIntent": true
+      }
+    }
+  },
+
+  "categories": [
+    {
+      "id": "tools",
+      "label": "Interactive Tools",
+      "description": "Calculators, assessments, and interactive resources",
+      "icon": "calculator"
+    },
+    {
+      "id": "downloads", 
+      "label": "Downloads",
+      "description": "Comprehensive guides and playbooks",
+      "icon": "download"
+    },
+    {
+      "id": "templates",
+      "label": "Templates",
+      "description": "Ready-to-use frameworks and checklists",
+      "icon": "file-text"
+    },
+    {
+      "id": "assessments",
+      "label": "Assessments", 
+      "description": "Evaluation tools and readiness checks",
+      "icon": "clipboard-check"
+    }
+  ],
+
+  "analytics": {
+    "conversionEvents": [
+      "magnet_viewed",
+      "magnet_selected", 
+      "email_submitted",
+      "resource_downloaded",
+      "followup_scheduled"
+    ],
+    "followUpActions": [
+      "email_nurture_sequence",
+      "schedule_consultation",
+      "download_resource",
+      "redirect_to_calendar"
+    ]
+  }
+}

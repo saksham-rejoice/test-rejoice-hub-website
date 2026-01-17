@@ -1,0 +1,458 @@
+/**
+ * Accessibility Styles for WCAG 2.1 AA Compliance
+ */
+
+/* Screen reader utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  border: 2px solid #fbbf24;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+/* Skip links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Focus management */
+*:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Enhanced focus for interactive elements */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.5);
+}
+
+/* Remove default focus for mouse users */
+.mouse-user *:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-gradient-to-r {
+    background: #000 !important;
+    color: #fff !important;
+  }
+  
+  .text-navy-950 {
+    color: #000 !important;
+  }
+  
+  .text-white {
+    color: #fff !important;
+  }
+  
+  .border-gray-100 {
+    border-color: #000 !important;
+    border-width: 2px !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Large text support */
+@media (min-resolution: 2dppx) {
+  .text-accessible {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+}
+
+/* Enhanced button accessibility */
+button[disabled],
+input[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button[aria-pressed="true"] {
+  background-color: #374151;
+  color: #fff;
+}
+
+/* Form accessibility */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: #ef4444;
+  border-width: 2px;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* ARIA live regions */
+.live-region {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+[aria-live] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Modal accessibility */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Focus trap for modals */
+.focus-trap {
+  outline: none;
+}
+
+/* Accessible color ratios */
+.text-accessible-contrast {
+  color: #1f2937; /* Meets WCAG AA standards against white */
+}
+
+.bg-accessible-contrast {
+  background-color: #1f2937;
+  color: #fff;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Accessible tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Accessible links */
+a {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+a:visited {
+  color: #7c3aed;
+}
+
+/* External link indicators */
+a[href^="http"]:not([href*="rejoicehub.com"])::after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: #6b7280;
+}
+
+/* Language and direction support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[lang]:not([lang="en"])::before {
+  content: attr(lang) ": ";
+  font-size: 0.8em;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+/* Print accessibility */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Touch target sizes for mobile */
+@media (max-width: 768px) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Error states */
+.error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.error:focus {
+  outline-color: #ef4444;
+}
+
+/* Success states */
+.success {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+}
+
+/* Warning states */
+.warning {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+/* Accessible form validation */
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: #fbbf24;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+/* Required field indicators */
+.required::after {
+  content: " *";
+  color: #ef4444;
+}
+
+/* Accessible tooltips */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #1f2937;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Accessible progress indicators */
+.progress {
+  width: 100%;
+  height: 20px;
+  background-color: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #fbbf24;
+  transition: width 0.3s ease;
+}
+
+/* Accessible breadcrumbs */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin: 0 0.5rem;
+  color: #6b7280;
+}
+
+/* Accessible pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0 0.25rem;
+}
+
+.pagination a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  text-decoration: none;
+  border-radius: 0.375rem;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+  background-color: #f9fafb;
+}
+
+.pagination .current {
+  background-color: #fbbf24;
+  border-color: #fbbf24;
+  color: #1f2937;
+}

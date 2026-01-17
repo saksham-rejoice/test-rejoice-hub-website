@@ -1,0 +1,164 @@
+/**
+ * CSS utilities for performance optimization and layout shift prevention
+ */
+
+/* Aspect ratio containers to prevent layout shift */
+@layer utilities {
+  .aspect-ratio-16-9 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  .aspect-ratio-4-3 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+  }
+  
+  .aspect-ratio-1-1 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* 1:1 aspect ratio */
+  }
+  
+  .aspect-ratio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* GPU acceleration for smooth animations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Contain layout to prevent shifts */
+  .layout-contained {
+    contain: layout style paint;
+  }
+
+  /* Optimize for loading states */
+  .loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  /* Optimized focus states for accessibility */
+  .focus-optimized:focus {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .motion-safe {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* Critical rendering optimization */
+  .critical-content {
+    content-visibility: auto;
+    contain-intrinsic-size: 300px;
+  }
+
+  /* Font optimization */
+  .font-optimized {
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Image optimization */
+  .img-optimized {
+    loading: lazy;
+    decoding: async;
+  }
+
+  /* Performance-optimized hover states */
+  .hover-performance:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+    will-change: transform;
+  }
+
+  .hover-performance:not(:hover) {
+    will-change: auto;
+  }
+}
+
+/* Global performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-synthesis: none;
+}
+
+/* Optimize images globally */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Lazy loading placeholder */
+img[loading=\"lazy\"] {
+  background: #f3f4f6;
+  transition: opacity 0.3s;
+}
+
+/* Preload critical fonts */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-bold.woff2') format('woff2');
+}

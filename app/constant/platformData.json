@@ -1,0 +1,62 @@
+{
+  "fintech": [
+    {
+      "id": "1a9d4c12-7f21-4b8a-9a11-2f3c9d8a0011",
+      "projectName": "Algomatic Bot",
+      "url": "https://algomaticbot.com/",
+      "image": "/fintech/finance-slider-1.webp",
+      "description": "Algomatic Bot is an advanced automated trading solution that empowers traders with intelligent algorithmic strategies. The platform supports seamless exchange integration, real-time market analysis, customizable trading bots, backtesting, risk management tools, and detailed analytics dashboards designed for both novice and experienced traders."
+    },
+    {
+      "id": "2b8f3e91-0d44-4d1a-b7e2-3f91a0b20022",
+      "projectName": "Juno Markets",
+      "url": "https://www.junomarkets.com/en",
+      "image": "/fintech/finance-slider-2.webp",
+      "description": "Juno Markets is a global online trading platform offering access to forex, commodities, indices, and cryptocurrencies. It delivers a comprehensive trading experience with competitive spreads, advanced trading tools, educational resources, intuitive interfaces, and dedicated customer support."
+    },
+    {
+      "id": "4d7c9a88-1f2b-4c33-bc9e-91d2a4e40044",
+      "projectName": "Algomatic Bot",
+      "url": "https://algomaticbot.com/",
+      "image": "/fintech/finance-slider-1.webp",
+      "description": "Algomatic Bot is an advanced automated trading solution that empowers traders with intelligent algorithmic strategies. The platform supports seamless exchange integration, real-time market analysis, customizable trading bots, backtesting, risk management tools, and detailed analytics dashboards designed for both novice and experienced traders."
+    },
+    {
+      "id": "5e0b8c2d-3a6f-4a1e-8c22-0f91a5d50055",
+      "projectName": "Juno Markets",
+      "url": "https://www.junomarkets.com/en",
+      "image": "/fintech/finance-slider-2.webp",
+      "description": "Juno Markets is a global online trading platform offering access to forex, commodities, indices, and cryptocurrencies. It delivers a comprehensive trading experience with competitive spreads, advanced trading tools, educational resources, intuitive interfaces, and dedicated customer support."
+    }
+  ],
+  "lms": [
+    {
+      "id": "7a2c9e44-3d11-4b9a-8f55-1c9d7eaa9001",
+      "projectName": "Rejoice Hub LMS",
+      "url": "https://lms.rejoicehub.com/",
+      "image": "/fintech/lms-slider-1.webp",
+      "description": "Rejoice Hub LMS is a comprehensive educational platform that streamlines academic administration and enhances learning experiences. The system integrates attendance, exams, homework, fee management, and communication into one unified solution. With AI-powered student support, automated grading, and intelligent insights for administrators, Rejoice Hub LMS empowers educators to focus on teaching while efficiently managing routine tasks across all devices."
+    },
+    {
+      "id": "8b5d1f66-9a22-47e3-bc88-5f9a3dbe9002",
+      "projectName": "Five Veda",
+      "url": "https://pips-veda.vercel.app/",
+      "image": "/fintech/lms-slider-2.webp",
+      "description": "Five Veda is a cloud-based school management platform that streamlines educational operations for schools and colleges. The system integrates attendance tracking, online classes, assignment management, fee collection, and parent-school communication into one unified solution. With dedicated mobile apps for all stakeholders, Veda automates administrative tasks while enabling seamless digital learning experiences and promoting paperless, sustainable education."
+    },
+    {
+      "id": "9c3e7a11-5d44-4a9f-bc12-7a9e2fcd9003",
+      "projectName": "Rejoice Hub LMS",
+      "url": "https://lms.rejoicehub.com/",
+      "image": "/fintech/lms-slider-1.webp",
+      "description": "Rejoice Hub LMS is a comprehensive educational platform that streamlines academic administration and enhances learning experiences. The system integrates attendance, exams, homework, fee management, and communication into one unified solution. With AI-powered student support, automated grading, and intelligent insights for administrators, Rejoice Hub LMS empowers educators to focus on teaching while efficiently managing routine tasks across all devices."
+    },
+    {
+      "id": "ad8f2c55-6e91-47b2-9d44-2b1e8fcb9004",
+      "projectName": "Five Veda",
+      "url": "https://pips-veda.vercel.app/",
+      "image": "/fintech/lms-slider-2.webp",
+      "description": "Five Veda is a cloud-based school management platform that streamlines educational operations for schools and colleges. The system integrates attendance tracking, online classes, assignment management, fee collection, and parent-school communication into one unified solution. With dedicated mobile apps for all stakeholders, Veda automates administrative tasks while enabling seamless digital learning experiences and promoting paperless, sustainable education."
+    }
+  ]
+}

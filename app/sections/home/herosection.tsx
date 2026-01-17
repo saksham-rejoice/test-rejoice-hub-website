@@ -1,0 +1,306 @@
+import { useState, useRef } from "react";
+import {
+  ArrowRight,
+  Play,
+  Star,
+  CheckCircle,
+  Code,
+  Download,
+  Copy,
+  Sparkles,
+  Zap,
+} from "lucide-react";
+
+const HeroSection = () => {
+  const [prompt, setPrompt] = useState("");
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const quickPrompts = [
+    "Customer Support Chatbot",
+    "Data Analysis Agent",
+    "Email Marketing Automation",
+    "Sales Lead Qualification",
+    "Content Generation Bot",
+    "Process Automation",
+  ];
+
+  const handleQuickPrompt = (selectedPrompt: string) => {
+    setPrompt(selectedPrompt);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!prompt.trim()) return;
+
+    setIsGenerating(true);
+
+    // Simulate processing time
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    setIsGenerating(false);
+    setShowConfirmation(true);
+  };
+
+  const handleConfirmGeneration = () => {
+    // This is where your backend pipeline will be triggered
+
+    // You can add your API call here
+    // Example: await generateCodeAPI(prompt);
+
+    setShowConfirmation(false);
+    setPrompt("");
+
+    // Show success message or redirect to results page
+    alert("Your AI code is being generated! We'll notify you when it's ready.");
+  };
+
+  const trustedPartners = [
+    { name: "TechCorp", logo: "/partners/techcorp.png" },
+    { name: "InnovateLab", logo: "/partners/innovatelab.png" },
+    { name: "DataFlow", logo: "/partners/dataflow.png" },
+    { name: "CloudScale", logo: "/partners/cloudscale.png" },
+    { name: "AIFirst", logo: "/partners/aifirst.png" },
+    { name: "DigitalEdge", logo: "/partners/digitaledge.png" },
+  ];
+
+  return (
+    <>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/cover-video.mp4" type="video/mp4" />
+          </video>
+
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60 z-10"></div>
+        </div>
+
+        <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 text-center pt-20">
+          <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-8 border border-white/20">
+            <Star className="w-4 h-4 mr-2 text-amber-400" />
+            Trusted by 100+ Companies Worldwide
+          </div>
+
+          <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            Your AI Partners in
+            <span className="block bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+              Innovation
+            </span>
+          </h1>
+
+          <p className="text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
+            We build intelligent AI agents that work alongside your team,
+            automating tasks and amplifying your business capabilities.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+              <CheckCircle className="w-4 h-4 text-amber-400" />
+              <span className="text-white text-sm">
+                10x Faster Implementation
+              </span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+              <CheckCircle className="w-4 h-4 text-amber-400" />
+              <span className="text-white text-sm">95%+ Accuracy</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+              <CheckCircle className="w-4 h-4 text-amber-400" />
+              <span className="text-white text-sm">24/7 Availability</span>
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="flex items-center justify-center mb-6">
+                <Sparkles className="w-8 h-8 text-amber-400 mr-3" />
+                <h3 className="text-2xl font-bold text-white">
+                  AI Code Generator
+                </h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Describe your requirements and get instant, production-ready
+                code generated by our AI
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-white font-semibold text-lg mb-3">
+                    What AI solution do you need?
+                  </label>
+                  <textarea
+                    value={prompt}
+                    onChange={(e) => setPrompt(e.target.value)}
+                    placeholder="Describe the AI solution you want to build (e.g., customer support chatbot, data analysis agent, email automation)..."
+                    className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none"
+                    style={{ minHeight: "120px" }}
+                    rows={4}
+                  />
+                </div>
+
+                <div>
+                  <p className="text-gray-300 mb-3 text-sm">
+                    Or choose from popular solutions:
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {quickPrompts.map((quickPrompt) => (
+                      <button
+                        key={quickPrompt}
+                        type="button"
+                        onClick={() => handleQuickPrompt(quickPrompt)}
+                        className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300 text-sm"
+                      >
+                        {quickPrompt}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isGenerating || !prompt.trim()}
+                  className="w-full px-6 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                >
+                  {isGenerating ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <span>Processing Your Request...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Zap className="w-5 h-5" />
+                      <span>Generate AI Code</span>
+                    </>
+                  )}
+                </button>
+              </form>
+
+              <div className="mt-8 pt-6 border-t border-white/20">
+                <p className="text-gray-300 mb-4 text-sm">What you'll get:</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="flex items-center space-x-2 text-white text-sm">
+                    <CheckCircle className="w-4 h-4 text-amber-400" />
+                    <span>Production-ready code</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-white text-sm">
+                    <CheckCircle className="w-4 h-4 text-amber-400" />
+                    <span>Implementation guide</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-white text-sm">
+                    <CheckCircle className="w-4 h-4 text-amber-400" />
+                    <span>1-on-1 consultation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {showConfirmation && (
+            <div className="fixed inset-0 modal-bg bg-opacity-50 flex items-center justify-center p-4 z-50">
+              <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Code className="h-8 w-8 text-amber-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Ready to Generate Your AI Code?
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    We'll create a custom {prompt} solution for you with full
+                    implementation details.
+                  </p>
+
+                  <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                    <p className="text-sm text-gray-700 font-medium mb-2">
+                      Your Request:
+                    </p>
+                    <p className="text-sm text-gray-600 italic">"{prompt}"</p>
+                  </div>
+
+                  <div className="flex space-x-3">
+                    <button
+                      onClick={handleConfirmGeneration}
+                      className="flex-1 px-6 py-3 bg-amber-600 text-white font-semibold rounded-xl hover:bg-amber-700 transition-colors"
+                    >
+                      Generate Now
+                    </button>
+                    <button
+                      onClick={() => setShowConfirmation(false)}
+                      className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+
+                  <p className="text-xs text-gray-500 mt-4">
+                    Your code will be generated and sent to you within minutes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <a
+              href="https://calendly.com/dipak-rejoicehub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-100 transition-colors flex items-center space-x-2"
+            >
+              <span>Start Free Consultation</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-colors">
+              View Case Studies
+            </button>
+          </div>
+
+          <div className="border-t border-white/20 pt-12">
+            <p className="text-gray-300 mb-8 text-lg">
+              Trusted by industry leaders
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+              {trustedPartners.map((partner, index) => (
+                <div
+                  key={partner.name}
+                  className="flex items-center justify-center p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                >
+                  <div className="w-16 h-8 bg-white/20 rounded flex items-center justify-center">
+                    <span className="text-white text-xs font-medium">
+                      {partner.name}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 flex justify-center items-center space-x-8 text-sm text-gray-400">
+            <div className="flex items-center space-x-2">
+              <span className="text-amber-400">★</span>
+              <span>4.9/5 Rating</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-amber-400">★</span>
+              <span>500+ Success Stories</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-amber-400">★</span>
+              <span>24/7 Support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default HeroSection;

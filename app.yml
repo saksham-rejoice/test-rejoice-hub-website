@@ -1,0 +1,5 @@
+apps:
+  - name: rejoice-website-v3
+    script: pnpm start
+    env:
+      PORT: 3445

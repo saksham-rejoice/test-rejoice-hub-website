@@ -1,0 +1,15 @@
+
+# *
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /user/
+Disallow: /api/
+Disallow: /latest-news/
+
+# Host
+Host: https://rejoicehub.com
+
+Sitemap:https://rejoicehub.com//sitemap.xml
