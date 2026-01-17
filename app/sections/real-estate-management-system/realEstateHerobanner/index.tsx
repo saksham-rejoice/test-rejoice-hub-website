@@ -21,7 +21,7 @@ export default function RealEstateHerobanner() {
           </p>
 
           <div className="pt-5 flex items-center gap-4 max-mobile:grid max-mobile:grid-cols-1">
-            <Link to="/free-ai-assessment">
+            <Link to="https://calendly.com/dipak-rejoicehub" target="_blank">
               <Button
                 variant="default"
                 size={"lg"}

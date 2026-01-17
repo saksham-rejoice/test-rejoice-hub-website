@@ -30,7 +30,7 @@ export default function RestaurantHerobanner() {
           </p>
 
           <div className="pt-5 flex items-center gap-4 max-mobile:grid max-mobile:grid-cols-1">
-            <Link to="/free-ai-assessment">
+            <Link to="https://calendly.com/dipak-rejoicehub" target="_blank">
               <Button
                 variant="default"
                 size={"lg"}
@@ -40,7 +40,7 @@ export default function RestaurantHerobanner() {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            <Link to="https://calendly.com/dipak-rejoicehub" target="_blank">
+            {/* <Link to="https://calendly.com/dipak-rejoicehub" target="_blank">
               <Button
                 variant="default"
                 size={"lg"}
@@ -48,7 +48,7 @@ export default function RestaurantHerobanner() {
               >
                 Watch Demo
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div>
