@@ -62,7 +62,7 @@ const cardVariants = {
 
 export default function HowItWorks() {
   return (
-    <section className="py-20 max-mobile:py-12 bg-[#E9F1FF]">
+    <section className="py-20 max-mobile:py-12 bg-[#FFF]">
       <div className="container-lg2">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -17,11 +17,10 @@ export default function RealEstateShowcase({ data }: RealEstateShowcaseProps) {
     <div className="py-20 max-mobile:py-16">
       <div className="container-lg2">
         <h2 className="heading2 text-primary text-center mb-[120px] mx-auto max-mobile:mb-[60px]">
-          Real Estate <span className="text-gradient">Management Solutions</span>{" "}
-          Built for Success
+          Our Successful Projects in <span className="text-gradient">Real Estate Management</span>
         </h2>
-        <div className="bg-[#E9F1FF] rounded-2xl max-mobile:rounded-xl relative max-tab:grid max-tab:grid-cols-1 max-tab:gap-8 max-mobile:py-10 max-mobile:px-3">
-          <div className="absolute max-tab:relative max-tab:top-0 max-mobile:left-0 top-[-8%] left-[-5%] max-w-[50%] max-tab:max-w-full h-[500px] max-tab:h-auto">
+        <div className="bg-[#E9F1FF] rounded-2xl max-mobile:rounded-xl relative max-tab:grid max-tab:grid-cols-1 max-tab:gap-8 max-mobile:py-10 max-mobile:px-3 overflow-hidden">
+          <div className="absolute max-tab:relative max-tab:top-0 max-mobile:left-0 top-[-8%] left-0 max-w-[50%] max-tab:max-w-full h-[500px] max-tab:h-auto">
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeSlide}
