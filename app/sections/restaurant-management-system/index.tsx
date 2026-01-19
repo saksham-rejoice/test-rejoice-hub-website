@@ -1,10 +1,11 @@
-import React from "react";
 import RestaurantHerobanner from "./restaurantHerobanner";
 import RestaurantChallenges from "./restaurantChallenges";
 import RestaurantPartner from "./restaurantPartner";
 import RestaurantFeatures from "./restaurantFeatures";
-import WhyChooseRejoiceHub from "./whyChooseRejoiceHub";
+import RestaurantShowcase from "./restaurantShowcase";
 import HowItWorks from "./howItWorks";
+import platformData from "~/constant/platformData.json";
+import WhyChooseRejoiceHub from "./whyChooseRejoiceHub";
 
 export default function RestaurantManagementSystemPage() {
   return (
@@ -14,6 +15,7 @@ export default function RestaurantManagementSystemPage() {
       <RestaurantPartner />
       <RestaurantFeatures />
       <WhyChooseRejoiceHub />
+      <RestaurantShowcase data={platformData.lms} />
       <HowItWorks />
     </div>
   );

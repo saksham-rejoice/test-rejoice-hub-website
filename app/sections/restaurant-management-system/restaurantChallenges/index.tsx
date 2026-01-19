@@ -116,7 +116,7 @@ export default function RestaurantChallenges() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-x-[50px] gap-y-10 mt-20"
+          className="grid grid-cols-3 gap-y-10 max-tab:grid-cols-2 gap-x-7 max-tablet:grid-cols-1 max-mobile:grid-cols-1 mt-10"
         >
           {challengesData.map((item) => {
             const IconComponent = item.icon;
@@ -124,21 +124,20 @@ export default function RestaurantChallenges() {
               <motion.div
                 key={item.id}
                 variants={cardVariants}
-                whileHover={{ y: -6 }}
-                className="w-[calc(33.33%-50px)] max-tab:w-[calc(50%-30px)] max-mobile:w-full"
+                className="rounded-[0_25px] border-[1.5px] border-[#FF9404] bg-[#FFF4EB]"
               >
-                <div className="grid grid-cols-[80px_1fr] max-mobile:grid-cols-1 items-center gap-5">
-                  <div className="max-mobile:max-w-[60px]">
-                    <IconComponent className="w-16 h-16 max-mobile:w-12 max-mobile:h-12 text-[#FF9404] stroke-[1.5]" />
+                <div className="mt-[-25px] px-5">
+                  <div className="w-[55px] h-[55px] rounded-full bg-white border-2 border-[#FF9404] flex items-center justify-center">
+                    <IconComponent className="w-7 h-7 text-[#FF9404] stroke-[1.5]" />
                   </div>
-                  <div>
-                    <h3 className="text-lg max-mobile:text-xl mb-2 font-medium text-black">
-                      {item.title}
-                    </h3>
-                    <p className="text-base font-normal text-[#6D727E]">
-                      {item.description}
-                    </p>
-                  </div>
+                </div>
+                <div className="px-5 pb-5">
+                  <h3 className="text-xl max-mobile:text-xl font-semibold text-primary mt-4 mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-base max-mobile:text-sm text-gray-600">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             );

@@ -121,31 +121,24 @@ export default function RealEstateFeatures() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-x-[50px] gap-y-10 mt-20"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20"
         >
           {featuresData.map((item) => (
             <motion.div
               key={item.id}
               variants={cardVariants}
               whileHover={{ y: -6 }}
-              className="w-[calc(33.33%-50px)] max-tab:w-[calc(50%-30px)] max-mobile:w-full"
+              className="rounded-2xl p-4 border-solid border border-[#FF5F011A] bg-gradient-to-b from-[rgba(255,93,1,0.06)] to-[rgba(255,149,4,0.06)]"
             >
-              <div className="grid grid-cols-[80px_1fr] max-mobile:grid-cols-1 items-center gap-5">
-                {/* <img
-                  src={item.icon.toString() || ""}
-                  alt={item.title}
-                  className="block max-mobile:max-w-[60px]"
-                /> */}
-                <item.icon className={`w-16 h-16 max-mobile:w-12 max-mobile:h-12 text-[#FF9404] stroke-[1.5]`} />
-                <div>
-                  <h3 className="text-lg max-mobile:text-xl mb-2 font-medium text-black">
-                    {item.title}
-                  </h3>
-                  <p className="text-base font-normal text-[#6D727E]">
-                    {item.description}
-                  </p>
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-12 h-12 border border-orange-600 rounded-xl flex items-center justify-center">
+                  <item.icon className="w-6 h-6 text-[#FF9404] stroke-[1.5]" />
                 </div>
+                <h3 className="text-lg font-bold text-primary">
+                  {item.title}
+                </h3>
               </div>
+              <p className="text-primary font-normal">{item.description}</p>
             </motion.div>
           ))}
         </motion.div>

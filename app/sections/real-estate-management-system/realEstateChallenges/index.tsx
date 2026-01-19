@@ -114,30 +114,30 @@ export default function RealEstateChallenges() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-x-[50px] gap-y-10 mt-20"
+          className="grid grid-cols-3 gap-x-[30px] gap-y-16 max-tab:grid-cols-2 max-mobile:grid-cols-1 max-tab:gap-y-12 mt-20"
         >
           {challengesData.map((item) => (
             <motion.div
               key={item.id}
               variants={cardVariants}
               whileHover={{ y: -6 }}
-              className="w-[calc(33.33%-50px)] max-tab:w-[calc(50%-30px)] max-mobile:w-full"
+              className="rounded-[20px] border-[1.5px] border-[#FF9404] bg-white px-[30px]"
             >
-              <div className="grid grid-cols-[80px_1fr] max-mobile:grid-cols-1 items-center gap-5">
-                {/* <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="block max-mobile:max-w-[60px]"
-                /> */}
-                <item.icon className={`w-16 h-16 max-mobile:w-12 max-mobile:h-12 text-[#FF9404] stroke-[1.5]`} />
-                <div>
-                  <h3 className="text-lg max-mobile:text-xl mb-2 font-medium text-black">
-                    {item.title}
-                  </h3>
-                  <p className="text-base font-normal text-[#6D727E]">
-                    {item.description}
-                  </p>
+              {/* Card Header */}
+              <div className="rounded-[53px] mt-[-30px] flex items-center gap-2.5 border-[1.5px] p-1.5 border-[#FF9404] bg-white w-full">
+                <div className="w-[45px] h-[45px] max-tab:w-[35px] max-tab:h-[35px] rounded-full bg-[#FF9404] flex items-center justify-center shrink-0">
+                  <item.icon className="w-6 h-6 max-tab:w-5 max-tab:h-5 text-white stroke-[2]" />
                 </div>
+                <p className="text-lg max-tab:text-base font-medium text-black">
+                  {item.title}
+                </p>
+              </div>
+
+              {/* Content */}
+              <div className="pt-5 pb-5">
+                <p className="text-base font-normal text-[#6D727E]">
+                  {item.description}
+                </p>
               </div>
             </motion.div>
           ))}
