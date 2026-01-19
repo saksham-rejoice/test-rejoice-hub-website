@@ -104,7 +104,7 @@ const cardVariants = {
 
 export default function RestaurantFeatures() {
   return (
-    <section className="relative bg-gradient-to-b from-[rgba(255,93,1,0.08)] to-[rgba(255,149,4,0.08)] py-20 max-mobile:py-12 overflow-hidden">
+    <section className="relative bg-[#fff] py-20 max-mobile:py-12 overflow-hidden">
       {/* Background Lines */}
       <div className="absolute top-0 w-full z-[-1]">
         <img src={TopLineImage} alt="Top Line" className="w-full" />
@@ -140,20 +140,20 @@ export default function RestaurantFeatures() {
               <motion.div
                 key={item.id}
                 variants={cardVariants}
-                className="rounded-[0_25px] border-[1.5px] border-[#FF9404] bg-[#FFF4EB]"
+                className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-b from-[rgba(255,93,1,0.08)] to-[rgba(255,149,4,0.08)] p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="mt-[-25px] px-5">
-                  <div className="w-[55px] h-[55px] rounded-full bg-white border-2 border-[#FF9404] flex items-center justify-center">
-                    <IconComponent className="w-7 h-7 text-[#FF9404] stroke-[1.5]" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-[#FFF4EB] border border-[#FF9404] flex items-center justify-center flex-shrink-0">
+                    <IconComponent className="w-6 h-6 text-[#FF9404] stroke-[1.5]" />
                   </div>
-                </div>
-                <div className="px-5 pb-5">
-                  <h3 className="text-xl max-mobile:text-xl font-semibold text-primary mt-4 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-base max-mobile:text-sm text-gray-600">
-                    {item.description}
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-primary mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             );
