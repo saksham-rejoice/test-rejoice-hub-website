@@ -54,13 +54,13 @@ const featuresData = [
     description:
       "Capture, track, and convert property inquiries faster with structured lead tracking and follow-ups.",
   },
-  {
-    id: 7,
-    icon: Share2,
-    title: "Multi-User Access",
-    description:
-      "Collaborate with your team using role-based access and real-time updates.",
-  },
+  // {
+  //   id: 7,
+  //   icon: Share2,
+  //   title: "Multi-User Access",
+  //   description:
+  //     "Collaborate with your team using role-based access and real-time updates.",
+  // },
 ];
 
 /* -------------------- ANIMATIONS -------------------- */
