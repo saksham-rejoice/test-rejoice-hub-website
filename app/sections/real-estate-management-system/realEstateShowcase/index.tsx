@@ -14,7 +14,7 @@ interface RealEstateShowcaseProps {
 export default function RealEstateShowcase({ data }: RealEstateShowcaseProps) {
   const [activeSlide, setActiveSlide] = useState(0);
   return (
-    <div className="py-20 max-mobile:py-16">
+    <div className="py-20 max-mobile:py-16" id="portfolio">
       <div className="container-lg2">
         <h2 className="heading2 text-primary text-center mb-[120px] mx-auto max-mobile:mb-[60px]">
           Our Successful Projects in <span className="text-gradient">Real Estate Management</span>

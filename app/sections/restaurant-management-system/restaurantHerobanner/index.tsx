@@ -36,11 +36,11 @@ export default function RestaurantHerobanner() {
                 size={"lg"}
                 className="text-white py-2.5 h-auto rounded-lg cursor-pointer font-medium text-base"
               >
-                Start Free Trial
+                Get Start Today
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            {/* <Link to="https://calendly.com/dipak-rejoicehub" target="_blank">
+            <Link to="/solutions/real-estate-management-system/#portfolio">
               <Button
                 variant="default"
                 size={"lg"}
@@ -48,7 +48,7 @@ export default function RestaurantHerobanner() {
               >
                 Watch Demo
               </Button>
-            </Link> */}
+            </Link>
           </div>
         </div>
         <div>

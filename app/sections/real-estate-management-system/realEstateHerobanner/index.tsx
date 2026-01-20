@@ -27,19 +27,19 @@ export default function RealEstateHerobanner() {
                 size={"lg"}
                 className="text-white py-2.5 h-auto rounded-lg cursor-pointer font-medium text-base"
               >
-                Start Free Trial
+                Get Start Today
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            {/* <Link to="https://calendly.com/dipak-rejoicehub" target="_blank">
+            <Link to="/solutions/real-estate-management-system/#portfolio">
               <Button
                 variant="default"
                 size={"lg"}
                 className=" py-2  bg-[linear-gradient(180deg,_#FF5E01_0%,_#FF9404_100%)]  text-white  rounded-lg h-auto cursor-pointer font-medium text-base focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
               >
-                Schedule Demo
+                Watch Demo
               </Button>
-            </Link> */}
+            </Link>
           </div>
         </div>
         <div>

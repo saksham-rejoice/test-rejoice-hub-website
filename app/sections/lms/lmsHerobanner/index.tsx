@@ -2,6 +2,7 @@ import { ArrowRight, Calendar, Check } from "lucide-react";
 import React from "react";
 import { Button } from "~/components/ui/button";
 import BannerImage from "../../../../public/assets/images/lms.png";
+import { Link } from "react-router-dom";
 
 export default function LmsHerobanner() {
   return (
@@ -44,24 +45,25 @@ export default function LmsHerobanner() {
             </div>
 
             <div className="pt-5 flex items-center gap-4 max-mobile:grid max-mobile:grid-cols-1">
-              <Button
-                variant="default"
-                size={"lg"}
-                className="text-white py-2.5 h-auto rounded-lg cursor-pointer font-medium text-base"
-                onClick={() =>
-                  window.open("https://hr-agent.rejoicehub.com/", "_blank")
-                }
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-              <Button
-                variant="default"
-                size={"lg"}
-                className=" py-2  bg-[linear-gradient(180deg,_#FF5E01_0%,_#FF9404_100%)]  text-white  rounded-lg h-auto cursor-pointer font-medium text-base focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
-              >
-                Watch Demo
-              </Button>
+              <Link to="https://calendly.com/dipak-rejoicehub" target="_blank">
+                <Button
+                  variant="default"
+                  size={"lg"}
+                  className="text-white py-2.5 h-auto rounded-lg cursor-pointer font-medium text-base"
+                >
+                  Schedule Free Consultation
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to="/solutions/learning-experience-platform/#portfolio">
+                <Button
+                  variant="default"
+                  size={"lg"}
+                  className=" py-2  bg-[linear-gradient(180deg,_#FF5E01_0%,_#FF9404_100%)]  text-white  rounded-lg h-auto cursor-pointer font-medium text-base focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+                >
+                  Watch Demo
+                </Button>
+              </Link>
             </div>
           </div>
           <div>
