@@ -15,7 +15,7 @@ export default function RestaurantManagementSystemPage() {
       <RestaurantPartner />
       <RestaurantFeatures />
       <WhyChooseRejoiceHub />
-      <RestaurantShowcase data={platformData.lms} />
+      {/* <RestaurantShowcase data={platformData.lms} /> */}
       <HowItWorks />
     </div>
   );

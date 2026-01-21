@@ -11,7 +11,10 @@ export default function LmsPage() {
     <div>
       <LmsHerobanner />
       <Accessibility />
-      <LearningPlatform data={platformData.lms} />
+      <LearningPlatform 
+        data={platformData.lms} 
+        heading={<>Our Learning Projects That Create <span className="text-gradient">Engaging Learning Experiences</span></>}
+      />
       <LearningManagement />
       <EmpowersLearners />
       <MobileLearningManagement />

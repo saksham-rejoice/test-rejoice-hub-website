@@ -12,7 +12,10 @@ export default function FintechPage() {
     <div>
       <FintechHerobanner />
       <FinanceSoftwaredevelopment />
-      <LearningPlatform data={platformData.fintech} />
+      <LearningPlatform 
+        data={platformData.fintech} 
+        heading={<>Fintech Projects That Create <span className="text-gradient">Real Business Impact</span></>}
+      />
       <BeyondLearningManagement />
       <EmpowersLearners />
       <MobileLearningManagement />

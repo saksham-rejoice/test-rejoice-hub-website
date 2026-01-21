@@ -6,19 +6,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { PlatformProject } from "~/types/platformTypes";
+import { ReactNode } from "react";
 
 interface LearningPlatformProps {
   data: PlatformProject[];
+  heading: ReactNode;
 }
 
-export default function LearningPlatform({ data }: LearningPlatformProps) {
+export default function LearningPlatform({ data, heading }: LearningPlatformProps) {
   const [activeSlide, setActiveSlide] = useState(0);
   return (
     <div className="py-20 max-mobile:py-16" id="portfolio">
       <div className="container-lg2">
         <h2 className="heading2 text-primary text-center mb-[120px]  mx-auto max-mobile:mb-[60px]">
-          A Corporate <span className="text-gradient"> Learning Platform </span>{" "}
-          for Building a Thriving Culture
+          {heading}
         </h2>
         <div className="bg-[#E9F1FF] rounded-2xl max-mobile:rounded-xl relative max-tab:grid max-tab:grid-cols-1 max-tab:gap-8 max-mobile:py-10 max-mobile:px-3">
           <div className="absolute max-tab:relative max-tab:top-0 max-mobile:left-0 top-[-8%] left-[-5%]">

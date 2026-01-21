@@ -40,7 +40,7 @@ export default function RestaurantHerobanner() {
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
-            <Link to="/solutions/real-estate-management-system/#portfolio">
+            {/* <Link to="/solutions/real-estate-management-system/#portfolio">
               <Button
                 variant="default"
                 size={"lg"}
@@ -48,7 +48,7 @@ export default function RestaurantHerobanner() {
               >
                 Watch Demo
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div>

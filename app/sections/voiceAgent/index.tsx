@@ -10,7 +10,10 @@ export default function VoiceAgentPage() {
     <div>
       <VoiceAgentBanner />
       <CustomerInteraction />
-      <LearningPlatform data={platformData.fintech} />
+      <LearningPlatform 
+        data={platformData.voiceAgent} 
+        heading={<>Our Call Automation Solutions That <span className="text-gradient">Elevate Customer Interactions</span></>}
+      />
       <NextgenEngagement />
       <ExhaustiveAIfeatures />
     </div>

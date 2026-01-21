@@ -18,7 +18,7 @@ export default function RealEstateManagementSystemPage() {
      <RealEstatePartner />
      <RealEstateFeatures />
      <WhyChooseRejoiceHub/>
-     <RealEstateShowcase data={platformData.fintech} />
+     {/* <RealEstateShowcase data={platformData.fintech} /> */}
      <HowItWorks />
      <WhoCanBenefit />
      <GetStartedCta />

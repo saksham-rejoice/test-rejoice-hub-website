@@ -58,5 +58,14 @@
       "image": "/fintech/lms-slider-2.webp",
       "description": "Five Veda is a cloud-based school management platform that streamlines educational operations for schools and colleges. The system integrates attendance tracking, online classes, assignment management, fee collection, and parent-school communication into one unified solution. With dedicated mobile apps for all stakeholders, Veda automates administrative tasks while enabling seamless digital learning experiences and promoting paperless, sustainable education."
     }
+  ],
+  "voiceAgent": [
+    {
+      "id": "va1-4f8e9d22-7a33-4c1b-9e66-3d9f8eca1001",
+      "projectName": "CallIntel",
+      "url": "https://callintel.io/",
+      "image": "/assets/images/call_intel.png",
+      "description": "An intelligent voice-powered assistant that automates customer interactions with natural language processing. The platform provides 24/7 support, multi-language capabilities, sentiment analysis, call routing, and seamless CRM integration to enhance customer satisfaction and reduce operational costs."
+    }
   ]
 }
