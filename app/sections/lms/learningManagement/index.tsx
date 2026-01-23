@@ -86,7 +86,7 @@ export default function LearningManagement() {
           viewport={{ once: true }}
           className="heading2 text-primary text-center mb-2 max-w-[983px] mx-auto"
         >
-          Beyond Learning <span className="text-gradient">Management</span>
+          <span className="text-gradient">Beyond Learning Management:</span> A Complete Learning Experience
         </motion.h2>
 
         <motion.p
@@ -96,8 +96,7 @@ export default function LearningManagement() {
           viewport={{ once: true }}
           className="text-lg max-w-[1072px] mx-auto text-grey-600 max-mobile:text-base text-center mb-20"
         >
-          Move past traditional learning management system corporate limitations
-          and empower your organization with advanced capabilities.
+          RejoiceHub’s LXP goes further than a traditional LMS, delivering tools that modern organizations need:
         </motion.p>
 
         {/* Cards */}

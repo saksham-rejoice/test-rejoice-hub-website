@@ -1,32 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import EmpowersImage from "/assets/images/empowers.png";
+/* -------------------- TYPE DEFINITIONS -------------------- */
+interface EmpowerItem {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+}
 
-/* -------------------- STATIC DATA -------------------- */
-const empowersData = [
-  {
-    id: 1,
-    image: EmpowersImage,
-    title: "DigitalFinTech l Platforms",
-    description:
-      "Custom FinTech platforms supporting secure transactions, real-time analytics, reporting dashboards, and role-based user management.",
-  },
-  {
-    id: 2,
-    image: EmpowersImage,
-    title: "Automation and Compliance",
-    description:
-      "Automate FinTech workflows while ensuring regulatory compliance, data security, audit readiness, and reduced operational risk.",
-  },
-  {
-    id: 3,
-    image: EmpowersImage,
-    title: "Scalable Growth Systems",
-    description:
-      "FinTech software architectures are designed to support high performance, seamless scaling, and future system integrations.",
-  },
-];
+interface EmpowersLearnersProps {
+  title: React.ReactNode;
+  subtitle?: string;
+  data: EmpowerItem[];
+}
 
 /* -------------------- ANIMATION VARIANTS -------------------- */
 const containerVariants = {
@@ -63,7 +50,7 @@ const imageVariants = {
   },
 };
 
-export default function EmpowersLearners() {
+export default function EmpowersLearners({ title, subtitle, data }: EmpowersLearnersProps) {
   return (
     <div className="py-20">
       <div className="container-lg2">
@@ -75,19 +62,19 @@ export default function EmpowersLearners() {
           viewport={{ once: true }}
           className="mb-4 heading2 text-primary text-center"
         >
-          Real World <span className="text-gradient"> FinTech Software </span>{" "}
-          Use Cases
+          {title}
         </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-[60px] text-lg max-w-[1072px] mx-auto text-grey-600 max-mobile:text-base text-center "
-        >
-          Enhance development through a skills-first approach utilized by top
-          corporate learning management systems worldwide.
-        </motion.p>
+        {subtitle && (
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-[60px] text-lg max-w-[1072px] mx-auto text-grey-600 max-mobile:text-base text-center "
+          >
+            {subtitle}
+          </motion.p>
+        )}
 
         {/* Cards */}
         <motion.div
@@ -97,7 +84,7 @@ export default function EmpowersLearners() {
           viewport={{ once: true }}
           className="grid grid-cols-3 gap-6 max-tab:grid-cols-2 max-mobile:grid-cols-1"
         >
-          {empowersData.map((item) => (
+          {data.map((item) => (
             <motion.div
               key={item.id}
               variants={cardVariants}

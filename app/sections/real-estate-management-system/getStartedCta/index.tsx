@@ -10,7 +10,8 @@ export default function GetStartedCta() {
         "Don't let outdated tools slow your growth. Upgrade to RejoiceHub's AI-powered real estate management system and take full control of your properties, tenants, finances, and document everything in one platform.",
       ]}
       ctaText="Get Started Now"
-      ctaLink="/free-ai-assessment"
+      ctaLink="https://calendly.com/dipak-rejoicehub"
+      target="_blank"
     />
   );
 }

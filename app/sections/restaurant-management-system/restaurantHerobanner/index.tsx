@@ -9,9 +9,7 @@ export default function RestaurantHerobanner() {
       <div className="grid grid-cols-[1fr_635px]  pt-[160px] max-mobile:pb-16 pb-20  max-tab:grid-cols-1 max-tab:gap-10 max-mobile:gap-5 gap-0 items-center z-auto">
         <div className="bg-[url('/assets/images/line.png')]  bg-no-repeat bg-cover w-full pr-10 max-tab:pr-0">
           <h2 className="title text-primary  mb-5 max-w-[845px] font-semibold ">
-            All-in-One{" "}
-            <span className="text-gradient">Restaurant Management System</span>{" "}
-            for Modern Businesses
+            Smart <span className="text-gradient">Restaurant Management System</span> to Streamline Your Operations
           </h2>
           <p className="text-lg text-black-500 max-w-[779px] mb-3 max-mobile:text-base font-semibold">
             Smart, Scalable & AI-Ready Solution by RejoiceHub
@@ -22,11 +20,6 @@ export default function RestaurantHerobanner() {
             designed to handle everything from POS billing and restaurant order
             management system workflows to restaurant inventory management
             system, staff coordination, and real-time analytics.
-          </p>
-          <p className="text-lg text-black-500 max-w-[779px] mb-5 max-mobile:text-base">
-            Whether you manage a single outlet or multiple locations, our
-            platform helps you centralize operations, reduce costs, and scale
-            efficiently using one powerful dashboard.
           </p>
 
           <div className="pt-5 flex items-center gap-4 max-mobile:grid max-mobile:grid-cols-1">

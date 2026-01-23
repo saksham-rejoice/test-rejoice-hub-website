@@ -1,0 +1,100 @@
+{
+  "lms": {
+    "cards": [
+      {
+        "id": 1,
+        "title": "Drive Engagement & Knowledge Retention",
+        "description": "Personalized course suggestions based on learner behavior and goals.",
+        "icon": "GraduationCap"
+      },
+      {
+        "id": 2,
+        "title": "Boost Analytics-Driven Training Decisions",
+        "description": "Videos, podcasts, documents, interactive modules, and more.",
+        "icon": "LineChart"
+      },
+      {
+        "id": 3,
+        "title": "Learn Anywhere, Anytime",
+        "description": "Discussion forums, peer collaboration, and knowledge sharing.",
+        "icon": "Globe"
+      },
+      {
+        "id": 4,
+        "title": "Personalized Growth & Career Paths",
+        "description": "Track engagement, completion rates, and learning outcomes.",
+        "icon": "TrendingUp"
+      },
+      {
+        "id": 5,
+        "title": "Seamless Enterprise Integrations",
+        "description": "Learn anytime, anywhere on any device with responsive design.",
+        "icon": "Workflow"
+      },
+      {
+        "id": 6,
+        "title": "Enterprise-Grade Security & Compliance",
+        "description": "Motivate learners with points, leaderboards, and achievements.",
+        "icon": "ShieldCheck"
+      }
+    ]
+  },
+  "fintech": {
+    "cards": [
+      {
+        "id": 1,
+        "title": "Custom FinTech Software Development",
+        "description": "Tailored financial technology solutions for your business needs.",
+        "icon": "Code2"
+      },
+      {
+        "id": 2,
+        "title": "Secure Transaction Systems",
+        "description": "Enterprise-grade security for all financial transactions.",
+        "icon": "Lock"
+      },
+      {
+        "id": 3,
+        "title": "Scalable System Architecture",
+        "description": "Cloud-native infrastructure that grows with your business.",
+        "icon": "Network"
+      },
+      {
+        "id": 4,
+        "title": "Financial Data Management",
+        "description": "Centralized data control and monitoring capabilities.",
+        "icon": "Database"
+      },
+      {
+        "id": 5,
+        "title": "User & Access Control Systems",
+        "description": "Role-based permissions and security management.",
+        "icon": "Users"
+      },
+      {
+        "id": 6,
+        "title": "Risk & Compliance Management",
+        "description": "Automated compliance and risk monitoring systems.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "id": 7,
+        "title": "Multi-Currency & Localization Support",
+        "description": "Global payment processing and localization features.",
+        "icon": "Globe"
+      },
+      {
+        "id": 8,
+        "title": "API & Third-Party Integrations",
+        "description": "Seamless integration with banking and financial systems.",
+        "icon": "Workflow"
+      },
+      {
+        "id": 9,
+        "title": "Reporting & Financial Analytics",
+        "description": "Real-time insights and comprehensive financial reporting.",
+        "icon": "BarChart3"
+      }
+    ]
+  }
+}

@@ -43,6 +43,8 @@ import {
   FolderCode,
   BookOpenCheck,
 } from "lucide-react";
+import { MdOutlineRealEstateAgent } from "react-icons/md";
+import { IoRestaurantOutline } from "react-icons/io5";
 const hrAgent = "/assets/icons/HRAgent.svg";
 const upworkAgent = "/assets/icons/UpworkAgent.svg";
 const callAgent = "/assets/icons/CallAgent.svg";
@@ -123,6 +125,18 @@ export const navItems: NavItem[] = [
             href: "/solutions/smart-call-automation",
             description: "Smart call automation",
             icon: upworkAgent,
+          },
+          {
+            label: "Real Estate Management System Solution",
+            href: "/solutions/real-estate-management-system",
+            description: "AI Powered Real Estate Automation",
+            icon: <MdOutlineRealEstateAgent />,
+          },
+          {
+            label: "Restaurant Management System Solution",
+            href: "/solutions/restaurant-management-system",
+            description: "Automate Your Restaurant with AI",
+            icon: <IoRestaurantOutline />,
           },
         ],
       },

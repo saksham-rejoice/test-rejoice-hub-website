@@ -1,43 +1,49 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { 
+  Landmark, 
+  LineChart, 
+  Wallet, 
+  ShieldCheck, 
+  FileCheck2 
+} from "lucide-react";
 
 import TopLineImage from "/assets/images/top-line.png";
 import BottomLineImage from "/assets/images/bottom-line.png";
-import InvestingIcon from "/assets/icons/Investing.svg";
 
 /* -------------------- STATIC DATA -------------------- */
 const benefitsData = [
   {
     id: 1,
-    icon: InvestingIcon,
+    icon: Landmark,
     title: "Core Banking Software",
     description:
       "Build modern banking systems with real-time transactions, mobile apps, and 99.9% uptime guarantee.",
   },
   {
     id: 2,
-    icon: InvestingIcon,
+    icon: LineChart,
     title: "Investment & Wealth Management",
     description:
       "Smart portfolio management with AI-driven analytics, automated trading, and real-time market insights.",
   },
   {
     id: 3,
-    icon: InvestingIcon,
+    icon: Wallet,
     title: "Payment Solutions",
     description:
       "High-performance payment solutions ensure secure, fast, and compliant digital financial transactions.",
   },
   {
     id: 4,
-    icon: InvestingIcon,
+    icon: ShieldCheck,
     title: "Insurance Technology",
     description:
       "Automated claims processing, AI underwriting, and fraud detection systems for modern insurance companies.",
   },
   {
     id: 5,
-    icon: InvestingIcon,
+    icon: FileCheck2,
     title: "Compliance Automation",
     description:
       "Automated KYC/AML verification, transaction monitoring, and regulatory reporting for complete compliance assurance.",
@@ -92,8 +98,7 @@ export default function FinanceSoftwaredevelopment() {
           viewport={{ once: true }}
           className="heading2 text-primary text-center mb-4"
         >
-          <span className="text-gradient">Benefits </span> of Our FinTech
-          Software Development Company
+          <span className="text-gradient">Benefits of </span> Choosing RejoiceHub for FinTech Development
         </motion.h2>
 
         <motion.p
@@ -103,9 +108,7 @@ export default function FinanceSoftwaredevelopment() {
           viewport={{ once: true }}
           className="text-lg max-w-[1072px] mx-auto text-grey-600 max-mobile:text-base text-center mb-20"
         >
-          Our FinTech software development services are designed to help
-          US-based finance companies, banks, and FinTech institutions build
-          secure, scalable, and future-ready FinTech software solutions.
+          Our fintech software development services combine advanced technologies, regulatory compliance, and business-driven innovation to deliver high-performance financial platforms that grow with your business.
         </motion.p>
 
         {/* Cards */}
@@ -124,11 +127,9 @@ export default function FinanceSoftwaredevelopment() {
               className="w-[calc(33.33%-50px)] max-tab:w-[calc(50%-30px)] max-mobile:w-full"
             >
               <div className="grid grid-cols-[80px_1fr] max-mobile:grid-cols-1 items-center gap-5">
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="block max-mobile:max-w-[60px]"
-                />
+                <div className="w-20 h-20 max-mobile:w-16 max-mobile:h-16 rounded-full bg-gradient-to-br from-[#FF5E01] to-[#FF9404] flex items-center justify-center">
+                  <item.icon className="w-10 h-10 max-mobile:w-8 max-mobile:h-8 text-white stroke-[1.5]" />
+                </div>
                 <div>
                   <h3 className="text-lg max-mobile:text-xl mb-2 font-medium text-black">
                     {item.title}

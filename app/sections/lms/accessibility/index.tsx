@@ -14,44 +14,44 @@ import BrandingIcon from "/assets/icons/Branding.svg";
 const cardsData = [
   {
     id: 1,
-    title: "Limited Course Formats",
+    title: "Limited Learning Formats",
     description:
-      "Traditional corporate learning management systems often provide basic course structures. Our platform supports diverse formats, including video, interactive modules, microlearning, assessments, and blended learning, enabling flexible experiences applicable to workplace learning and learning management systems for education.",
+      "Traditional systems provide basic course structures. RejoiceHub supports diverse formats — videos, interactive modules, microlearning, assessments, and blended learning — for a richer experience that meets modern needs.",
     icon: ProposalsIcon,
   },
   {
     id: 2,
-    title: " Difficult Learning Curve",
+    title: "Difficult Learning Curve",
     description:
-      "Complex interfaces frustrate learners and admins. Our intuitive platform reduces onboarding time and ensures smooth adoption for corporate learning management systems implementations.",
+      "Clunky interfaces slow adoption. Our user-friendly platform shortens onboarding time for learners and administrators alike, ensuring smooth implementation and continuous use.",
     icon: LearningIcon,
   },
   {
     id: 3,
     title: "Lack of Learner Engagement",
     description:
-      "Passive learning can’t meet modern corporate needs. Our platform enhances engagement through gamification, social learning, personalized paths, and interactive modules that keep learners active, whether used in enterprise or learning management systems for education contexts.",
+      "Passive content no longer works. With gamification, social learning, personalized paths, and interactive modules, RejoiceHub keeps learners motivated and active.",
     icon: EngagementIcon,
   },
   {
     id: 4,
     title: "Skills Mismatches",
     description:
-      "Generic training doesn’t resolve skills gaps. Our system aligns learning paths with roles, competencies, and core objectives, ensuring learning management systems for corporate training deliver measurable performance gains. ",
+      "Generic training doesn't deliver targeted growth. RejoiceHub aligns learning paths with roles, competencies, and objectives, resulting in meaningful performance improvements.",
     icon: IntegrationsIcon,
   },
   {
     id: 5,
-    title: " Lack of Technical Integration",
+    title: "Lack of Technical Integration",
     description:
-      "Disconnected data hurts decision-making. Our LMS integrates with HRIS, CRM, communication tools, and other enterprise apps, supporting seamless workflows that modern corporate learning management systems require.",
+      "Disconnected systems impede workflows. Our platform integrates seamlessly with HRIS, CRM, communication tools, and other enterprise apps to unify your learning ecosystem.",
     icon: PlatformIcon,
   },
   {
     id: 6,
-    title: "Content Tracking",
+    title: "Content Tracking & Analytics",
     description:
-      "Track ROI and progress accurately. Our advanced analytics help measure outcomes, making your learning management system corporate strategy data-driven.",
+      "Track ROI and progress with ease. Advanced analytics and dashboards help you measure outcomes and optimize learning strategies based on data.",
     icon: BrandingIcon,
   },
 ];
@@ -104,9 +104,7 @@ export default function Accessibility() {
           viewport={{ once: true }}
           className="heading2 text-primary text-center mb-4 max-w-[983px] mx-auto"
         >
-          Overcoming Accessibility and{" "}
-          <span className="text-gradient">Engagement Challenges</span> in
-          Corporate Learning
+          Overcoming <span className="text-gradient">Learning Challenges</span> in Modern Organizations
         </motion.h2>
 
         {/* Description */}
@@ -117,8 +115,7 @@ export default function Accessibility() {
           viewport={{ once: true }}
           className="text-lg max-w-[1072px] mx-auto text-grey-600 max-mobile:text-base text-center mb-20"
         >
-          Modern organizations using learning management systems for corporate
-          training often face common barriers that limit learning outcomes.
+          Today’s corporate and academic training systems struggle with rigid formats, low engagement, and disconnected data. RejoiceHub LXP is designed to solve these hurdles, empowering you with flexible learning tools and insights that drive real results.
         </motion.p>
 
         {/* Cards */}

@@ -38,7 +38,7 @@ export default function VoiceAgentBanner() {
                 size={"lg"}
                 className=" py-2  bg-[linear-gradient(180deg,_#FF5E01_0%,_#FF9404_100%)]  text-white  rounded-lg h-auto cursor-pointer font-medium text-base focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
               >
-                Watch Demo
+                View Our Portfolio
               </Button>
             </Link>
           </div>

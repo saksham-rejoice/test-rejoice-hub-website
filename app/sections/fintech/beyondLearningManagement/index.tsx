@@ -67,15 +67,13 @@ export default function BeyondLearningManagement() {
           {workflowSteps.map((item, index) => (
             <div key={index} className="flex justify-center relative">
               <div>
-                <span className="w-10 absolute left-[30%] translate-x-[-50%] h-10 rounded-full flex items-center mx-auto justify-center text-lg text-white font-semibold border border-white bg-[#FF9404]">
+                {/* <span className="w-10 absolute left-[30%] translate-x-[-50%] h-10 rounded-full flex items-center mx-auto justify-center text-lg text-white font-semibold border border-white bg-[#FF9404]">
+                  {index + 1}
+                </span> */}
+                <div className=" flex justify-center pt-5">
+                  <span className="w-16 h-16 max-mobile:w-12 max-mobile:h-12 rounded-full flex items-center mx-auto justify-center text-2xl max-mobile:text-lg text-white font-bold border-2 border-white bg-[#FF9404]">
                   {index + 1}
                 </span>
-                <div className=" flex justify-center pt-5">
-                  <img
-                    src={item.icon}
-                    className="block max-w-[80px]"
-                    alt="OpportunitiesIcon"
-                  />
                 </div>
                 <div className="mt-5 max-mobile:mt-4 text-center">
                   <h3 className="text-xl max-w-[250px] mx-auto relative max-mobile:text-xl font-medium text-center text-primary mb-2.5">

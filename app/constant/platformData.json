@@ -62,7 +62,7 @@
   "voiceAgent": [
     {
       "id": "va1-4f8e9d22-7a33-4c1b-9e66-3d9f8eca1001",
-      "projectName": "CallIntel",
+      "projectName": "Callintel",
       "url": "https://callintel.io/",
       "image": "/assets/images/call_intel.png",
       "description": "An intelligent voice-powered assistant that automates customer interactions with natural language processing. The platform provides 24/7 support, multi-language capabilities, sentiment analysis, call routing, and seamless CRM integration to enhance customer satisfaction and reduce operational costs."

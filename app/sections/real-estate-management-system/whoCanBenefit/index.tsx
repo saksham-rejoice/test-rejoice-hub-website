@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import {
   Building2,
-  UserCheck,
-  TrendingUp,
+  Key,
+  Coins,
   Globe,
-  Factory,
+  Warehouse,
+  Home,
 } from "lucide-react";
 import TopLineImage from "/assets/images/top-line.png";
 import BottomLineImage from "/assets/images/bottom-line.png";
@@ -18,12 +19,12 @@ const beneficiaries = [
   {
     id: 2,
     title: "Property Managers",
-    icon: UserCheck,
+    icon: Key,
   },
   {
     id: 3,
     title: "Landlords & Investors",
-    icon: TrendingUp,
+    icon: Coins,
   },
   {
     id: 4,
@@ -33,7 +34,12 @@ const beneficiaries = [
   {
     id: 5,
     title: "Commercial Property Owners",
-    icon: Factory,
+    icon: Warehouse,
+  },
+  {
+    id: 6,
+    title: "Residential Associations",
+    icon: Home,
   },
 ];
 

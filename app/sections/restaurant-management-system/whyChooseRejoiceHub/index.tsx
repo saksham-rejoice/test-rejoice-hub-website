@@ -70,13 +70,13 @@ export default function WhyChooseRejoiceHub() {
             })}
           </div>
 
-          <p className="text-lg text-center text-grey-600 max-mobile:text-base mt-10">
+          {/* <p className="text-lg text-center text-grey-600 max-mobile:text-base mt-10">
             That's why businesses trust RejoiceHub as their{" "}
             <span className="text-gradient font-semibold">
               best restaurant management software
             </span>{" "}
             partner.
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

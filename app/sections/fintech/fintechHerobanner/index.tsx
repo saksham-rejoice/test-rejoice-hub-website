@@ -13,15 +13,11 @@ export default function FintechHerobanner() {
             <span className="text-gradient"> Software Development </span>{" "}
             Services
           </h2>
+          <p className="text-lg text-black-800 max-w-[779px] mb-5 max-mobile:text-base font-bold">
+            Build Secure, Scalable & Intelligent Fintech Solutions
+          </p>
           <p className="text-lg text-black-500 max-w-[779px] mb-5 max-mobile:text-base">
-            Serving a wide range of industries, RejoiceHub specializes in
-            banking, fintech, and insurance software development. Since 2005, we
-            deliver secure and compliant BFSI solutions that bring{" "}
-            <span className="text-gradient">25-40%</span> faster business
-            processes, <span className="text-gradient">5-40%</span> reduction in
-            operational costs, <span className="text-gradient">10-15%</span>{" "}
-            increase in revenue, and <span className="text-gradient">100%</span>{" "}
-            visibility of FinTech transactions.
+            As a leading fintech development company, we provide custom fintech software development services tailored to your business needs. From AI-powered banking platforms to secure payment gateways and blockchain-based financial systems, we design, develop, and deploy fintech solutions that are built for growth, security, and performance.
           </p>
 
           <div className="pt-5 flex items-center gap-4 max-mobile:grid max-mobile:grid-cols-1">

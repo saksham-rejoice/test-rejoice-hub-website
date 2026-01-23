@@ -104,7 +104,7 @@ const cardVariants = {
 
 export default function RestaurantFeatures() {
   return (
-    <section className="relative bg-[#fff] py-20 max-mobile:py-12 overflow-hidden">
+    <section className="relative bg-[#fff] py-16 max-tab:py-12 max-mobile:py-8 overflow-hidden">
       {/* Background Lines */}
       <div className="absolute top-0 w-full z-[-1]">
         <img src={TopLineImage} alt="Top Line" className="w-full" />
@@ -120,7 +120,7 @@ export default function RestaurantFeatures() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="heading2 text-primary text-center mb-4"
+          className="heading2 text-primary text-center mb-2"
         >
           <span className="text-gradient">Our Powerful Features </span>
           to Run Your Restaurant Effortlessly
@@ -132,7 +132,7 @@ export default function RestaurantFeatures() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-3 gap-y-10 max-tab:grid-cols-2 gap-x-7 max-tablet:grid-cols-1 max-mobile:grid-cols-1 mt-10"
+          className="flex flex-wrap justify-center gap-y-6 max-mobile:gap-y-4 gap-x-7 max-tab:gap-x-5 mt-8 max-tab:mt-6 max-mobile:mt-4"
         >
           {featuresData.map((item) => {
             const IconComponent = item.icon;
@@ -140,7 +140,7 @@ export default function RestaurantFeatures() {
               <motion.div
                 key={item.id}
                 variants={cardVariants}
-                className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-b from-[rgba(255,93,1,0.08)] to-[rgba(255,149,4,0.08)] p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="rounded-2xl border border-[#E5E7EB] bg-gradient-to-b from-[rgba(255,93,1,0.08)] to-[rgba(255,149,4,0.08)] p-6 max-mobile:p-5 shadow-sm hover:shadow-md transition-shadow w-full sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)]"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-[#FFF4EB] border border-[#FF9404] flex items-center justify-center flex-shrink-0">

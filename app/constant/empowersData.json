@@ -1,0 +1,62 @@
+{
+  "fintech": [
+    {
+      "id": 1,
+      "image": "/assets/images/empowers.png",
+      "title": "Next-Gen Digital Banking Platforms",
+      "description": "We design and develop secure digital banking platforms that power seamless transactions, real-time financial dashboards, role-based access control, and personalized customer experiences. Our fintech solutions help banks and financial institutions modernize operations while maintaining enterprise-grade security and performance."
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/empowers.png",
+      "title": "Intelligent Automation & Regulatory Compliance",
+      "description": "Automate complex fintech workflows while staying fully compliant with global financial regulations. Our solutions integrate KYC, AML, data protection, audit trails, and risk monitoring systems to reduce operational costs, enhance transparency, and ensure regulatory readiness at scale."
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/empowers.png",
+      "title": "Scalable Growth & Integration Systems",
+      "description": "We build cloud-native fintech architectures designed for high performance, seamless scalability, and future-ready API integrations. From payment gateways to third-party financial tools, our platforms grow with your business without compromising speed, security, or system reliability."
+    }
+  ],
+  "lms": [
+    {
+      "id": 1,
+      "image": "/assets/images/empowers.png",
+      "title": "AI-Driven Personalization",
+      "description": "Automatically suggest courses, resources, and learning paths based on user behavior, goals, and performance."
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/empowers.png",
+      "title": "Content Aggregation & Discovery",
+      "description": "Centralize content from internal libraries, external partners, videos, podcasts, and documents — making it easy to find the right resource at the right time."
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/empowers.png",
+      "title": "Social & Collaborative Learning",
+      "description": "Encourage peer interaction, discussion forums, shared resources, and group learning that enrich the learner experience."
+    }
+  ],
+  "voiceAgent": [
+    {
+      "id": 1,
+      "image": "/assets/images/empowers.png",
+      "title": "Intelligent Call Routing",
+      "description": "AI-powered voice agents that intelligently route calls, understand customer intent, and provide instant responses 24/7."
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/empowers.png",
+      "title": "Natural Language Processing",
+      "description": "Advanced NLP capabilities that understand context, sentiment, and multiple languages for seamless customer interactions."
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/empowers.png",
+      "title": "Analytics and Insights",
+      "description": "Comprehensive call analytics, sentiment analysis, and performance metrics to optimize customer service operations."
+    }
+  ]
+}

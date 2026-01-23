@@ -15,9 +15,7 @@ export default function LmsHerobanner() {
               the Typical LMS
             </h2>
             <p className="text-lg text-black-500 max-w-[779px] mb-5 max-mobile:text-base">
-              Upgrade your corporate learning with a modern LMS that drives
-              engagement, boosts accessibility, and delivers measurable results
-              for employees across industries and education sectors.
+              Upgrade your learning ecosystem with the <span className="text-gradient">RejoiceHub Learning Experience Platform (LXP)</span> a next-generation, learner-centric solution that delivers personalized, engaging and measurable learning for both corporate teams and educational institutions.
             </p>
             <div className="flex items-center gap-2 pb-3 ">
               <Check className="text-orange w-5 h-5" />
@@ -61,7 +59,7 @@ export default function LmsHerobanner() {
                   size={"lg"}
                   className=" py-2  bg-[linear-gradient(180deg,_#FF5E01_0%,_#FF9404_100%)]  text-white  rounded-lg h-auto cursor-pointer font-medium text-base focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
                 >
-                  Watch Demo
+                  View Our Portfolio
                 </Button>
               </Link>
             </div>
