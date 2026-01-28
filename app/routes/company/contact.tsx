@@ -36,7 +36,8 @@ export const meta: MetaFunction = () => [
   { title: "Connect, Collaborate, Create | Contact Us" },
   {
     name: "description",
-    content: "Connect with RejoiceHub to discuss your project, get a free AI consultation, or request a quote. Our experts are ready to help so contact us today!",
+    content:
+      "Connect with RejoiceHub to discuss your project, get a free AI consultation, or request a quote. Our experts are ready to help so contact us today!",
   },
   {
     tagName: "link",
@@ -77,16 +78,14 @@ const Contact = () => {
   const officeAddress =
     "Atlanta mall, Digital Valley, A-301, Sudama Chowk, Mota Varachha, Surat, Gujarat 394101, India";
 
+  const lat = 21.2386396;
+  const lng = 72.8791483;
 
- const lat = 21.2386396;
-const lng = 72.8791483;
+  const mapsEmbedUrl = `https://maps.google.com/maps?hl=en&ie=UTF8&t=&z=20&q=${lat},${lng}&ll=${lat},${lng}&output=embed`;
 
-const mapsEmbedUrl = `https://maps.google.com/maps?hl=en&ie=UTF8&t=&z=20&q=${lat},${lng}&ll=${lat},${lng}&output=embed`;
-
-const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  officeAddress
-)}`;
-
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    officeAddress,
+  )}`;
 
   const handleMapClick = () => {
     window.open(mapsUrl, "_blank", "noopener,noreferrer");
@@ -148,7 +147,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
   ];
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
@@ -206,15 +205,15 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
     };
 
     try {
-      const { error } = await supabase.from("contactus").insert([
+      const { error } = await supabase.from("contact_us").insert([
         {
-          fullName: formData.fullName,
+          full_name: formData.fullName,
           email: formData.email,
           subject: formData.subject,
-          phoneNumber: formData.phoneNumber,
+          phone_number: formData.phoneNumber,
           service: formData.service,
           budget: formData.budget,
-          startTime: formData.time,
+          start_time: formData.time,
           requirement: formData.requirement,
           message: formData.message,
         },
@@ -223,12 +222,12 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
       if (error) {
         console.error("Supabase insert error", error);
         alert(
-          "Something went wrong while sending your message. Please try again."
+          "Something went wrong while sending your message. Please try again.",
         );
         return;
       }
 
-      await sendSlackMessage(slackPayload);
+      //await sendSlackMessage(slackPayload);
 
       setSuccessMsg("Thank you! Your message has been sent successfully.");
       setFormData({
@@ -378,7 +377,6 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
 
       <section className="max-mobile:py-12 py-20">
         <div className="max-w-6xl mx-auto px-4">
-
           <SectionHeader
             title="Visit Us"
             subtitle="We'd love to meet you. Find us on the map below."
@@ -422,7 +420,6 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
                   </a>
                 </div>
 
-
                 <div className="flex items-center gap-2 pb-3">
                   <Mail className="w-5 h-5 text-[#ff6900]" />
                   <a
@@ -434,7 +431,6 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
                   </a>
                 </div>
 
-
                 <div className="flex items-center gap-2 pb-3">
                   <Clock className="w-5 h-5 text-[#ff6900]" />
                   <a className="text-base font-medium text-gray-500 block font-medium">
@@ -443,11 +439,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
                 </div>
               </div>
               <div className="w-full max-mobile:mt-6">
-                <CTAButton
-                  variant="primary"
-                  size="md"
-                  fullWidth
-                >
+                <CTAButton variant="primary" size="md" fullWidth>
                   Get Directions
                 </CTAButton>
               </div>
@@ -455,11 +447,8 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
               {/* or: <p className="text-gray-700 leading-relaxed whitespace-pre-line">{officeAddress}</p> */}
             </div>
           </div>
-
         </div>
       </section>
-
-
 
       {/* Enhanced Contact Form */}
       <section className="py-20 max-mobile:py-12">
@@ -468,7 +457,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
             badge="Contact Form"
             title="Tell Us About Your Project"
             subtitle="Share your requirements and we'll get back to you with a detailed proposal within 24 hours."
-          // variant="navy"
+            // variant="navy"
           />
 
           <form

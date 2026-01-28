@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Phone, Mail, Calendar, MessageSquare, ArrowRight } from "lucide-react";
 import CTAButton from "./CTAButton";
 import { cn } from "~/lib/utils";
+import { supabase } from "~/Supabase/supabaseClient";
 
 interface ContactFormProps {
   serviceId?: string;
@@ -141,19 +142,27 @@ const ContactForm: React.FC<ContactFormProps> = ({
     setIsSubmitting(true);
 
     try {
-      // Here you would typically make an API call to your backend
-      // For example:
-      // await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
-      
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const { error } = await supabase.from("contact_us").insert([
+        {
+          full_name: formData.name,
+          email: formData.email,
+          subject: formData.service || "General Inquiry",
+          phone_number: formData.phone,
+          service: formData.service,
+          budget: formData.budget,
+          start_time: formData.timeline,
+          requirement: "General Contact Form",
+          message: formData.message,
+        },
+      ]);
+
+      if (error) {
+        console.error("Supabase insert error", error);
+        alert("Something went wrong while sending your message. Please try again.");
+        return;
+      }
       
       setSubmitted(true);
-      // Reset form after successful submission
       setFormData({
         name: "",
         email: "",
@@ -166,7 +175,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       });
     } catch (error) {
       console.error('Form submission error:', error);
-      // Handle error state if needed
+      alert("Unexpected error. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }

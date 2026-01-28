@@ -163,7 +163,7 @@ const OpenSourceToolDetail = () => {
                       key={tab.key}
                       className={`flex-1 px-6 py-2 rounded-full font-semibold transition-colors duration-200 focus:outline-none text-center
                         ${activeTab === tab.key
-                          ? "bg-navy-950 text-white shadow"
+                          ? "bg-navy-950 text-white shadow hover:bg-navy-900"
                           : "bg-transparent text-gray-800 hover:bg-gray-200"
                         }
                       `}
